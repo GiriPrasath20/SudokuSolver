@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-gray-200;
+  }
+  
+  body {
+    @apply bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen font-sans;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary-600 hover:bg-primary-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200 shadow-md hover:shadow-lg transform hover:-translate-y-0.5;
+  }
+  
+  .btn-secondary {
+    @apply bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-3 px-6 rounded-lg transition-all duration-200 shadow-md hover:shadow-lg transform hover:-translate-y-0.5;
+  }
+  
+  .btn-danger {
+    @apply bg-red-600 hover:bg-red-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200 shadow-md hover:shadow-lg transform hover:-translate-y-0.5;
+  }
+  
+  .sudoku-cell {
+    @apply w-full h-full text-center text-lg font-medium focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200 box-border bg-transparent;
+  }
+
+  .sudoku-cell-wrapper {
+    @apply border border-gray-300 bg-white box-border flex items-center justify-center;
+  }
+
+  .sudoku-grid-container {
+    @apply inline-grid grid-cols-9 gap-0 w-fit mx-auto select-none;
+  }
+  
+  .sudoku-cell.fixed {
+    @apply bg-sudoku-cell-fixed text-gray-700 cursor-not-allowed;
+  }
+  
+  .sudoku-cell.editable {
+    @apply bg-white hover:bg-sudoku-cell-hover cursor-pointer;
+  }
+  
+  .sudoku-cell.error {
+    @apply bg-red-100 border-red-300 text-red-700;
+  }
+  
+  .sudoku-cell.success {
+    @apply bg-green-100 border-green-300 text-green-700;
+  }
+}
