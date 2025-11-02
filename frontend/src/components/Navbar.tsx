@@ -48,7 +48,6 @@ const Navbar = () => {
                       : 'text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400'
                   }`}
                 >
-                  {item.label}
                   {isActive && (
                     <motion.div
                       layoutId="activeTab"

@@ -129,10 +129,10 @@ const Solve = () => {
         transition={{ duration: 0.5 }}
         className="text-center mb-8"
       >
-        <h1 className="text-4xl font-bold text-gray-800 mb-4">
+        <h1 className="text-4xl font-bold text-gray-800 dark:text-gray-100 mb-4">
           Solve My Sudoku
         </h1>
-        <p className="text-gray-600">
+        <p className="text-gray-600 dark:text-gray-300">
           Enter your Sudoku puzzle and let our algorithm solve it for you!
         </p>
       </motion.div>
@@ -144,10 +144,10 @@ const Solve = () => {
           animate={{ opacity: 1, y: 0 }}
           className={`mb-6 p-4 rounded-lg text-center font-medium ${
             hasSolution 
-              ? 'bg-green-100 text-green-800 border border-green-200' 
+              ? 'bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-200 border border-green-200 dark:border-green-700' 
               : message.includes('Error') || message.includes('cannot be solved')
-              ? 'bg-red-100 text-red-800 border border-red-200'
-              : 'bg-blue-100 text-blue-800 border border-blue-200'
+              ? 'bg-red-100 dark:bg-red-900/30 text-red-800 dark:text-red-200 border border-red-200 dark:border-red-700'
+              : 'bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200 border border-blue-200 dark:border-blue-700'
           }`}
         >
           {message}
@@ -238,14 +238,14 @@ const Solve = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.3 }}
-        className="mt-12 bg-white rounded-xl shadow-lg p-6"
+        className="mt-12 bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6"
       >
-        <h3 className="text-xl font-semibold text-gray-800 mb-4">
+        <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-100 mb-4">
           How to Use
         </h3>
-        <div className="grid md:grid-cols-2 gap-6 text-sm text-gray-600">
+        <div className="grid md:grid-cols-2 gap-6 text-sm text-gray-600 dark:text-gray-300">
           <div>
-            <h4 className="font-medium text-gray-800 mb-2">Input Your Puzzle:</h4>
+            <h4 className="font-medium text-gray-800 dark:text-gray-100 mb-2">Input Your Puzzle:</h4>
             <ul className="space-y-1">
               <li>• Click on any cell to enter numbers 1-9</li>
               <li>• Leave cells blank (0) for empty spaces</li>
@@ -254,7 +254,7 @@ const Solve = () => {
             </ul>
           </div>
           <div>
-            <h4 className="font-medium text-gray-800 mb-2">Solving:</h4>
+            <h4 className="font-medium text-gray-800 dark:text-gray-100 mb-2">Solving:</h4>
             <ul className="space-y-1">
               <li>• Click "Solve Puzzle" to find the solution</li>
               <li>• Our algorithm uses backtracking to find solutions</li>
@@ -270,12 +270,12 @@ const Solve = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.4 }}
-        className="mt-8 bg-white rounded-xl shadow-lg p-6"
+        className="mt-8 bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6"
       >
-        <h3 className="text-xl font-semibold text-gray-800 mb-4">
+        <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-100 mb-4">
           Need a Sample Puzzle?
         </h3>
-        <p className="text-gray-600 mb-4">
+        <p className="text-gray-600 dark:text-gray-300 mb-4">
           Here are some sample puzzles you can try:
         </p>
         <div className="grid md:grid-cols-2 gap-4">
@@ -301,10 +301,10 @@ const Solve = () => {
               setShowSolution(false)
               setMessage('Sample puzzle loaded! Click "Solve Puzzle" to see the solution.')
             }}
-            className="p-4 border border-gray-200 rounded-lg hover:border-primary-300 hover:bg-primary-50 transition-colors duration-200 text-left"
+            className="p-4 border border-gray-200 dark:border-gray-700 rounded-lg hover:border-primary-300 dark:hover:border-primary-600 hover:bg-primary-50 dark:hover:bg-primary-900/20 transition-colors duration-200 text-left"
           >
-            <h4 className="font-medium text-gray-800">Easy Puzzle</h4>
-            <p className="text-sm text-gray-600">A simple puzzle with many given numbers</p>
+            <h4 className="font-medium text-gray-800 dark:text-gray-100">Easy Puzzle</h4>
+            <p className="text-sm text-gray-600 dark:text-gray-300">A simple puzzle with many given numbers</p>
           </motion.button>
           
           <motion.button
@@ -329,10 +329,10 @@ const Solve = () => {
               setShowSolution(false)
               setMessage('Medium puzzle loaded! This one is a bit more challenging.')
             }}
-            className="p-4 border border-gray-200 rounded-lg hover:border-primary-300 hover:bg-primary-50 transition-colors duration-200 text-left"
+            className="p-4 border border-gray-200 dark:border-gray-700 rounded-lg hover:border-primary-300 dark:hover:border-primary-600 hover:bg-primary-50 dark:hover:bg-primary-900/20 transition-colors duration-200 text-left"
           >
-            <h4 className="font-medium text-gray-800">Medium Puzzle</h4>
-            <p className="text-sm text-gray-600">A more challenging puzzle with fewer clues</p>
+            <h4 className="font-medium text-gray-800 dark:text-gray-100">Medium Puzzle</h4>
+            <p className="text-sm text-gray-600 dark:text-gray-300">A more challenging puzzle with fewer clues</p>
           </motion.button>
         </div>
       </motion.div>

@@ -180,10 +180,10 @@ const Play = () => {
         transition={{ duration: 0.5 }}
         className="text-center mb-8"
       >
-        <h1 className="text-4xl font-bold text-gray-800 mb-4">
+        <h1 className="text-4xl font-bold text-gray-800 dark:text-gray-100 mb-4">
           Play Random Sudoku
         </h1>
-        <p className="text-gray-600">
+        <p className="text-gray-600 dark:text-gray-300">
           Generate a random Sudoku puzzle and test your solving skills!
         </p>
       </motion.div>
@@ -195,8 +195,8 @@ const Play = () => {
           animate={{ opacity: 1, y: 0 }}
           className={`mb-6 p-4 rounded-lg text-center font-medium ${
             isCompleted 
-              ? 'bg-green-100 text-green-800 border border-green-200' 
-              : 'bg-blue-100 text-blue-800 border border-blue-200'
+              ? 'bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-200 border border-green-200 dark:border-green-700' 
+              : 'bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200 border border-blue-200 dark:border-blue-700'
           }`}
         >
           {message}
@@ -269,14 +269,14 @@ const Play = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.3 }}
-        className="mt-12 bg-white rounded-xl shadow-lg p-6"
+        className="mt-12 bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6"
       >
-        <h3 className="text-xl font-semibold text-gray-800 mb-4">
+        <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-100 mb-4">
           How to Play
         </h3>
-        <div className="grid md:grid-cols-2 gap-6 text-sm text-gray-600">
+        <div className="grid md:grid-cols-2 gap-6 text-sm text-gray-600 dark:text-gray-300">
           <div>
-            <h4 className="font-medium text-gray-800 mb-2">Rules:</h4>
+            <h4 className="font-medium text-gray-800 dark:text-gray-100 mb-2">Rules:</h4>
             <ul className="space-y-1">
               <li>• Fill in numbers 1-9 in each row, column, and 3x3 box</li>
               <li>• Each number can only appear once per row, column, and box</li>
@@ -285,7 +285,7 @@ const Play = () => {
             </ul>
           </div>
           <div>
-            <h4 className="font-medium text-gray-800 mb-2">Tips:</h4>
+            <h4 className="font-medium text-gray-800 dark:text-gray-100 mb-2">Tips:</h4>
             <ul className="space-y-1">
               <li>• Start with cells that have fewer possibilities</li>
               <li>• Look for numbers that can only go in one place</li>

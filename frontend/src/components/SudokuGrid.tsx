@@ -87,12 +87,12 @@ const SudokuGrid: React.FC<SudokuGridProps> = ({
     let base =
       'sudoku-cell text-center transition-all duration-150 outline-none ring-0 ring-primary-500 text-base';
     if (isFixed) {
-      base += ' bg-sudoku-cell-fixed text-gray-700 cursor-not-allowed font-bold';
+      base += ' bg-sudoku-cell-fixed dark:bg-gray-700 text-gray-700 dark:text-gray-200 cursor-not-allowed font-bold';
     } else {
       base +=
-        ' bg-white hover:bg-sudoku-cell-hover focus:bg-sudoku-cell-hover text-primary-700';
+        ' bg-white dark:bg-gray-900 hover:bg-sudoku-cell-hover dark:hover:bg-gray-700 focus:bg-sudoku-cell-hover dark:focus:bg-gray-700 text-primary-700 dark:text-primary-300';
     }
-    if (error) base += ' animate-flash-red bg-red-100 border-red-300 text-red-700';
+    if (error) base += ' animate-flash-red bg-red-100 dark:bg-red-900/30 border-red-300 dark:border-red-700 text-red-700 dark:text-red-300';
     return base;
   };
 
@@ -103,7 +103,7 @@ const SudokuGrid: React.FC<SudokuGridProps> = ({
     if (row === 8) cn += ' border-b-2';
     if (col === 8) cn += ' border-r-2';
     return (
-      'border border-gray-300 bg-white box-border flex items-center justify-center' + cn
+      'border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 box-border flex items-center justify-center' + cn
     );
   };
 
@@ -112,7 +112,7 @@ const SudokuGrid: React.FC<SudokuGridProps> = ({
       initial={{ scale: 0.95, opacity: 0 }}
       animate={{ scale: 1, opacity: 1 }}
       transition={{ duration: 0.3 }}
-      className={`sudoku-grid bg-white p-4 rounded-xl shadow-lg ${className}`}
+      className={`sudoku-grid bg-white dark:bg-gray-800 p-4 rounded-xl shadow-lg ${className}`}
       style={{ display: 'inline-block' }}
     >
       <div
@@ -121,7 +121,7 @@ const SudokuGrid: React.FC<SudokuGridProps> = ({
           gridTemplateColumns: 'repeat(9, 42px)',
           gridTemplateRows: 'repeat(9, 42px)',
           gap: '0px',
-          background: 'white',
+          background: 'transparent',
         }}
       >
         {normalizedGrid.map((row, rowIndex) =>
