@@ -296,7 +296,7 @@ const Solve = () => {
               ]
               setGrid([...sampleGrid.map(row => [...row])])
               setOriginalGrid([...sampleGrid.map(row => [...row])])
-              setUndoStack([...sampleGrid.map(row => [...row])])
+              setUndoStack([sampleGrid.map(row => [...row])])
               setHasSolution(false)
               setShowSolution(false)
               setMessage('Sample puzzle loaded! Click "Solve Puzzle" to see the solution.')
@@ -324,7 +324,7 @@ const Solve = () => {
               ]
               setGrid([...sampleGrid.map(row => [...row])])
               setOriginalGrid([...sampleGrid.map(row => [...row])])
-              setUndoStack([...sampleGrid.map(row => [...row])])
+              setUndoStack([sampleGrid.map(row => [...row])])
               setHasSolution(false)
               setShowSolution(false)
               setMessage('Medium puzzle loaded! This one is a bit more challenging.')
