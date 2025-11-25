@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import SudokuGrid from '../components/SudokuGrid'
 import { sudokuAPI } from '../services/api'
@@ -11,16 +11,6 @@ const Play = () => {
   const [isGenerating, setIsGenerating] = useState(false)
   const [message, setMessage] = useState('')
   const [isCompleted, setIsCompleted] = useState(false)
-
-  // Initialize empty grid
-  const initializeEmptyGrid = () => {
-    return Array(9).fill(null).map(() => Array(9).fill(0))
-  }
-
-  // Initialize empty fixed cells
-  const initializeEmptyFixedCells = () => {
-    return Array(9).fill(null).map(() => Array(9).fill(false))
-  }
 
   // Generate new puzzle
   const generateNewPuzzle = async () => {

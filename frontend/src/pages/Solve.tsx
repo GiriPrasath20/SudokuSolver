@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import SudokuGrid from '../components/SudokuGrid'
 import { sudokuAPI } from '../services/api'
@@ -8,7 +8,6 @@ const Solve = () => {
   const [undoStack, setUndoStack] = useState<number[][][]>([])
   const [originalGrid, setOriginalGrid] = useState<number[][]>([])
   const [solvedGrid, setSolvedGrid] = useState<number[][]>([])
-  const [isLoading, setIsLoading] = useState(false)
   const [isSolving, setIsSolving] = useState(false)
   const [message, setMessage] = useState('')
   const [hasSolution, setHasSolution] = useState(false)
