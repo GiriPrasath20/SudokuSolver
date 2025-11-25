@@ -149,13 +149,6 @@ const Play = () => {
     setMessage('')
   }
 
-  // Reset to original puzzle
-  const resetPuzzle = () => {
-    setGrid([...originalGrid.map(row => [...row])])
-    setIsCompleted(false)
-    setMessage('')
-  }
-
   const handleUndo = () => {
     setUndoStack(stack => {
       if (stack.length <= 1) return stack
